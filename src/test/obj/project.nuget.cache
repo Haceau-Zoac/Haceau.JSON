@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "V1u25dcUdP5VVG6sUly8Kd1rQOCSvB7UTNQhhhHkbWSB+WaqMfpKViDda5qfqcjXmXNvb9byYiv4IiuTmkD+ow==",
+  "success": true,
+  "projectFilePath": "G:\\code\\CSharp\\Haceau.JSON\\src\\test\\test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
