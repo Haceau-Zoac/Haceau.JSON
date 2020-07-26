@@ -23,10 +23,15 @@ Haceau.JSON是一个类库，用于解析JSON字符串并返回Dictionary\<strin
 
 使用
 ---
-1. 导入dll文件（在Release里）
+1. 导入dll文件（在Release里）或下载nuget包（Haceau.JSON）
 2. 添加using Haceau.JSON
 3. 创建ReadJSON类的实例（例：ReadJSON readJSON = new ReadJSON();）
 4. 使用Parser方法读取JSON字符串（例：readJSON.Parser("{"键": ["值"]}";)）
+5. 更多见[文档](https://github.com/Haceau-Zoac/Haceau.JSON/wiki/Document)
+
+文档
+---
+[中文文档](https://github.com/Haceau-Zoac/Haceau.JSON/wiki/Document)
 
 待办清单
 ---

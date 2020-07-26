@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Haceau.JSON\Haceau.JSON.csproj" />
+    <PackageReference Include="Haceau.JSON" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
