@@ -31,7 +31,9 @@ Haceau.JSON是一个类库，用于解析JSON字符串并返回Dictionary\<strin
 
 文档
 ---
-[中文文档](https://github.com/Haceau-Zoac/Haceau.JSON/wiki/Document)
+[中文文档-Gituhb](https://github.com/Haceau-Zoac/Haceau.JSON/wiki/Document)
+
+[中文文档-Gitee](https://gitee.com/haceau/Haceau.JSON/wikis/Document)
 
 待办清单
 ---
