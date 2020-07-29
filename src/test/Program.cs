@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection.Metadata;
 
 namespace Haceau.JSON.test
 {
@@ -23,7 +24,6 @@ namespace Haceau.JSON.test
             string JSONString = "{\"Array\": [\"字符串\", false], \"number\": 123, \"double\": 999.888, \"dgfsrfe\": null}";
             Console.WriteLine($"Input: {JSONString}");
             ReadJSON readJSON = new ReadJSON();
-            
             Stopwatch sw = new Stopwatch();
             sw.Start();
             readJSON.Parser(JSONString);
@@ -43,6 +43,7 @@ namespace Haceau.JSON.test
             Console.WriteLine($"\t\"double\":{obj["double"]},");
             Console.WriteLine($"\t\"dgfsrfe\":{obj["dgfsrfe"] ?? "null"}");
             Console.WriteLine("}");
+            Console.WriteLine($"转换为字符串:{WriteJSON.Write(obj)}");
 
             sw.Start();
             for (int i = 0; i < 100; ++i)
@@ -73,6 +74,7 @@ namespace Haceau.JSON.test
             Console.WriteLine($"\t\"number\":{obj["number"]},");
             Console.WriteLine($"\t\"dgfsrfe\":{obj["dgfsrfe"] ?? "null"}");
             Console.WriteLine("}");
+            Console.WriteLine($"转换为字符串:{WriteJSON.Write(obj)}");
             sw.Start();
             for (int i = 0; i < 100; ++i)
                 readJSON.Parser(JSONString);
@@ -98,6 +100,7 @@ namespace Haceau.JSON.test
             Console.WriteLine("[");
             Console.WriteLine($"\t{obj[0]}");
             Console.WriteLine("]");
+            Console.WriteLine($"转换为字符串:{WriteJSON.Write(obj)}");
             sw.Start();
             for (int i = 0; i < 100; ++i)
                 readJSON.Parser(JSONString);
@@ -123,6 +126,7 @@ namespace Haceau.JSON.test
             Console.WriteLine("{");
             Console.WriteLine($"\t\"st\tring\":\"{obj["st\tring"]}\"");
             Console.WriteLine("}");
+            Console.WriteLine($"转换为字符串:{WriteJSON.Write(obj)}");
             sw.Start();
             for (int i = 0; i < 100; ++i)
                 readJSON.Parser(JSONString);
