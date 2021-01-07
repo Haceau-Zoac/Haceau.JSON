@@ -18,11 +18,10 @@ namespace Haceau.JSON
         /// <summary>
         /// 初始化，以使用一个对象读取多次JSON
         /// </summary>
-        public ReadJSON Init(string JSON)
+        public void Init(string JSON)
         {
             index = 0;
             InitJSON(JSON);
-            return this;
         }
 
         /// <summary>
@@ -37,10 +36,8 @@ namespace Haceau.JSON
                 // 如果在字符串内就不去除
                 if (JSON[i] == '"')
                 {
-                    this.JSON += '"';
-                    ++i;
-                    for (; JSON[i] != '"'; ++i)
-                        this.JSON += JSON[i];
+                    this.JSON += '"' + JSON.Substring(++i, JSON.IndexOf('\"', i) - i);
+                    i = JSON.IndexOf('\"', i);
                 }
                 this.JSON += new Regex("[ \t\r\n]").Replace(JSON[i].ToString(), "");
             }
@@ -52,47 +49,37 @@ namespace Haceau.JSON
         /// <returns>获取到的token</returns>
         private object NextToken()
         {
-            char ch = Char();
-            // 是数组
-            if (ch == '[')
+            switch (Char())
             {
-                NextChar();
-                return ReadArray();
+                case '[':
+                    NextChar();
+                    return ReadArray();
+                case '{':
+                    NextChar();
+                    return ReadObject();
+                case '"':
+                    NextChar();
+                    return ReadString();
+                case 'n':
+                    return ReadNull();
+                case ',':
+                    NextChar();
+                    return NextToken();
+                default:
+                    {
+                        // 是数字
+                        if (Regex.IsMatch(Char().ToString(), "[0-9]"))
+                        {
+                            return ReadNumber();
+                        }
+                        // 是布尔值
+                        if (Regex.IsMatch(Char().ToString(), "[tf]"))
+                        {
+                            return ReadBoolean();
+                        }
+                        throw new FormatException("错误的JSON格式。");
+                    }
             }
-            // 是对象
-            if (ch == '{')
-            {
-                NextChar();
-                return ReadObject();
-            }
-            // 是字符串
-            if (ch == '"')
-            {
-                NextChar();
-                return ReadString();
-            }
-            // 是数字
-            if (Regex.IsMatch(ch.ToString(), "[0-9]"))
-            {
-                return ReadNumber();
-            }
-            // 是布尔值
-            if (Regex.IsMatch(ch.ToString(), "[tf]"))
-            {
-                return ReadBoolean();
-            }
-            // 是空值
-            if (ch == 'n')
-            {
-                return ReadNull();
-            }
-            // 是字符
-            if (ch == ',')
-            {
-                NextChar();
-                return NextToken();
-            }
-            throw new FormatException("错误的JSON格式。");
         }
 
         /// <summary>
@@ -146,15 +133,9 @@ namespace Haceau.JSON
         /// <returns>读取到的token</returns>
         private string ReadString()
         {
-            // 初始化字符串
-            string str = "";
-
-            // 如果字符串没有结束就一直读取字符
-            for (; Char() != '"'; ++index)
-            {
-                str += Char();
-            }
-            NextChar();
+            // 获取字符串
+            string str = JSON.Substring(index, JSON.IndexOf('"', index) - index);
+            index = JSON.IndexOf('"', index) + 1;
             return str;
         }
 

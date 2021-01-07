@@ -1,0 +1,9 @@
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\bin\Debug\netstandard2.0\Haceau.JSON.deps.json
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\bin\Debug\netstandard2.0\Haceau.JSON.dll
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\bin\Debug\netstandard2.0\Haceau.JSON.pdb
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\obj\Debug\netstandard2.0\Haceau.JSON.csproj.CoreCompileInputs.cache
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\obj\Debug\netstandard2.0\Haceau.JSON.AssemblyInfoInputs.cache
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\obj\Debug\netstandard2.0\Haceau.JSON.AssemblyInfo.cs
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\obj\Debug\netstandard2.0\Haceau.JSON.dll
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\obj\Debug\netstandard2.0\Haceau.JSON.pdb
+G:\code\CSharp\Haceau.JSON\src\Haceau.JSON\obj\Debug\netstandard2.0\Haceau.JSON.csprojAssemblyReference.cache

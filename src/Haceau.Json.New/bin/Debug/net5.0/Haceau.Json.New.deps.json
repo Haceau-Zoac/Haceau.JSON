@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Haceau.Json.New/1.0.0": {
+        "runtime": {
+          "Haceau.Json.New.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Haceau.Json.New/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

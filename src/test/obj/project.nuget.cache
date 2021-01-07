@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UmfD1HjWdPiHnvklloNCKDTvLjuOR6Q0n5ukBLlayarxGAU4LHYpr0gn7y3W0i48qYKAD82PhhHFZGKDbjH6og==",
+  "success": true,
+  "projectFilePath": "G:\\code\\CSharp\\Haceau.JSON\\src\\test\\test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
